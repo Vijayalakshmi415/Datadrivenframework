@@ -12,8 +12,7 @@ public class ExcelDataConfig {
 	
 	//Constructor
 	public ExcelDataConfig(String excelpath) {
-		
-		
+			
 	try {
 		File file=new File(excelpath); 
 		FileInputStream fis=new FileInputStream(file);
