@@ -1,10 +1,47 @@
 package dataDriven;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
 public class LoginTest {
 
-	public static void main(String[] args) {
+		WebDriver driver;
+		@Test(dataProvider="loginData")
+		public void login(String username,String password)
+		{
+			System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32 (1)\\chromedriver.exe");
+			driver=new ChromeDriver();
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
+			driver.findElement(By.id("username")).sendKeys(username);
+			driver.findElement(By.id("password")).sendKeys(password);
+			driver.findElement(By.id("submit-button")).click();
+			//validation
+			Assert.assertTrue(driver.getTitle().contains("Sign In"), "User not able to login-Invalid credentials");
+			System.out.println("User able to login-Valid credentials");
+		}
 		
-
+		@DataProvider(name="loginData")
+		public Object[][] passData()
+		{
+			ExcelDataConfig config=new ExcelDataConfig("C:\\Users\\vijayalakshmi B\\git\\Datadrivenframework\\TestData\\testData.xlsx");
+			int rows=config.getRowCount(0);
+			
+			Object[][] data=new Object[rows][2];
+			for(int i=0;i<rows;i++)
+			{
+				data[i][0]=config.getData(0, i, 0);
+				data[i][1]=config.getData(0, i, 1);
+			}
+			return data;
+			}
 	}
 
-}

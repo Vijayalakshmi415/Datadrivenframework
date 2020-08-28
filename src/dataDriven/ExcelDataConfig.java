@@ -10,6 +10,7 @@ public class ExcelDataConfig {
 	XSSFWorkbook wb;
 	XSSFSheet sheet1;
 	
+	//Constructor
 	public ExcelDataConfig(String excelpath) {
 		
 		
@@ -25,10 +26,19 @@ public class ExcelDataConfig {
 	}
 	
 	}
+	
 	public String getData(int sheetNumber,int row,int column) {
 		sheet1=wb.getSheetAt(sheetNumber);
 		String data=sheet1.getRow(row).getCell(column).getStringCellValue();
 		
 		return data;
+	}
+
+	public int getRowCount(int sheetIndex)
+	{
+		int row=wb.getSheetAt(sheetIndex).getLastRowNum();
+		row=row+1;
+		return row;
+		
 	}
 }
