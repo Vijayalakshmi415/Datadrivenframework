@@ -30,12 +30,14 @@ public class LoginTest {
 		}
 		
 		@DataProvider(name="loginData")
+		//2D array with object data type
 		public Object[][] passData()
 		{
 			ExcelDataConfig config=new ExcelDataConfig("C:\\Users\\vijayalakshmi B\\git\\Datadrivenframework\\TestData\\testData.xlsx");
 			int rows=config.getRowCount(0);
 			
 			Object[][] data=new Object[rows][2];
+			
 			for(int i=0;i<rows;i++)
 			{
 				data[i][0]=config.getData(0, i, 0);
