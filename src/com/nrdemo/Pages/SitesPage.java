@@ -39,5 +39,4 @@ public class SitesPage {
 		testPage.click();
 		editButton.click();
 	}
-
 }

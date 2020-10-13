@@ -55,7 +55,7 @@ public class TestPage {
 	@FindBy(name="./buttonLabel")
 	WebElement buttonLabel;
 	
-	@FindBy(xpath="//*[@id=\"coral-id-513\"]/coral-panel-content/div/div/div/div[4]/foundation-autocomplete/div/div/span/button")
+	@FindBy(xpath="//*[@id=\"coral-id-514\"]/coral-panel-content/div/div/div/div[4]/foundation-autocomplete/div/div/span/button")
 	WebElement linkTo;
 	
 	@FindBy(xpath="//img[@class='foundation-collection-item-thumbnail' and @src='/content/aemboxplugin.thumb.48.48.png']")
@@ -67,7 +67,7 @@ public class TestPage {
 	@FindBy(xpath="//input[@name='./useFullWidth']")
 	WebElement checkbox;
 	
-	@FindBy(xpath="//button[@title='c']")
+	@FindBy(xpath="//button[@class='cq-dialog-header-action cq-dialog-submit coral3-Button coral3-Button--minimal' and @title='Done']")
 	WebElement done;
 	
 	@FindBy(id="pageinfo-trigger")
@@ -103,12 +103,13 @@ public class TestPage {
 		configure.click();
 		//drag and drop image
 		Actions act=new Actions(driver);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		act.dragAndDrop(image, dropImage).build().perform();
 		properties.click();
 		heading.sendKeys("Hero Image Test");
 		title.sendKeys("Test Title");
 		buttonLabel.sendKeys("Test button");
+		Thread.sleep(4000);
 		linkTo.click();
 		aemboxPlugin.click();
 		selectButton.click();

@@ -26,7 +26,5 @@ public class VerifyHeroImageComponent {
 		sitesPage.openTestPage();
 		testPage.dragAndDropHeroImageComponent();
 		testPage.authorHeroImageComponent();
-		
-	}
-
+		}
 }
