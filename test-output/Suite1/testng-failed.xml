@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test thread-count="5" name="data(failed)">
+    <classes>
+      <class name="dataDriven.CallToAction">
+        <methods>
+          <include name="loginTest"/>
+          <include name="callToAction" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- dataDriven.CallToAction -->
+    </classes>
+  </test> <!-- data(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="dataDriven.DataDrivenTest">
+      <class name="com.nrdemo.Testcases.VerifyHeroImageComponent">
         <methods>
-          <include name="excel"/>
+          <include name="verifyHeroImageComponent"/>
         </methods>
-      </class> <!-- dataDriven.DataDrivenTest -->
+      </class> <!-- com.nrdemo.Testcases.VerifyHeroImageComponent -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
