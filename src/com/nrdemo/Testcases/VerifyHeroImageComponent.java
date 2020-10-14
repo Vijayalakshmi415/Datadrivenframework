@@ -7,12 +7,13 @@ import org.testng.annotations.Test;
 import com.nrdemo.Pages.LoginPageNew;
 import com.nrdemo.Pages.SitesPage;
 import com.nrdemo.Pages.TestPage;
+import com.nrdemo.Pages.TestPagePublisher;
 
 import Utility.BrowserFactory;
 
 public class VerifyHeroImageComponent {
 	
-	@Test
+	@Test (priority=1)
 	public void verifyHeroImageComponent() throws Exception {
 		
 		WebDriver driver=BrowserFactory.startBrowser("chrome", "https://nextrow-author.adobesandbox.com/libs/granite/core/content/login.html");
@@ -22,9 +23,23 @@ public class VerifyHeroImageComponent {
 		LoginPageNew loginPage=PageFactory.initElements(driver, LoginPageNew.class);
 		
 		loginPage.loginNrdemo("admin", "jaP#uv+QAp9l");
-		
 		sitesPage.openTestPage();
 		testPage.dragAndDropHeroImageComponent();
 		testPage.authorHeroImageComponent();
+		testPage.publishTestPage();
+		
+		driver.quit();
 		}
+	
+	@Test(priority = 2)
+	public void verifyHeroImagePublisher() {
+		
+		WebDriver driver=BrowserFactory.startBrowser("chrome", "https://nextrow-publish.adobesandbox.com/content/nr_finance/language-masters/en/testpage.html");
+		
+		TestPagePublisher testpagepublish=PageFactory.initElements(driver, TestPagePublisher.class);
+		
+		testpagepublish.heroImagePublisherTest();
+		
+		driver.quit();
+	}
 }
