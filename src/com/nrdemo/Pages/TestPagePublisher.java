@@ -15,8 +15,8 @@ public class TestPagePublisher {
 	@FindBy(xpath="//*[text()='Hero Image Test']")
 	WebElement heroImagetest;
 	
-	public void heroImagePublisherTest()
-	{
+	public void heroImagePublisherTest(){
+		
 		if (heroImagetest.isDisplayed()) {
 			System.out.println("Publisher test pass");
 		}

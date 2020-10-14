@@ -23,6 +23,7 @@ public class VerifyHeroImageComponent {
 		LoginPageNew loginPage=PageFactory.initElements(driver, LoginPageNew.class);
 		
 		loginPage.loginNrdemo("admin", "jaP#uv+QAp9l");
+		
 		sitesPage.openTestPage();
 		testPage.dragAndDropHeroImageComponent();
 		testPage.authorHeroImageComponent();

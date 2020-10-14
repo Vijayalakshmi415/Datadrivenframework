@@ -5,7 +5,7 @@
     <classes>
       <class name="com.nrdemo.Testcases.VerifyHeroImageComponent">
         <methods>
-          <include name="verifyHeroImageComponent"/>
+          <include name="verifyHeroImagePublisher"/>
         </methods>
       </class> <!-- com.nrdemo.Testcases.VerifyHeroImageComponent -->
     </classes>

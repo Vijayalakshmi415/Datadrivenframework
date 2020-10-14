@@ -83,7 +83,6 @@ public class TestPage {
 		Iterator<String>i1=s.iterator();
 		while(i1.hasNext())
 		{
-
 		String child_window=i1.next();
 		if(!parent.equals(child_window))
 		{
@@ -109,15 +108,20 @@ public class TestPage {
 		heading.sendKeys("Hero Image Test");
 		title.sendKeys("Test Title");
 		buttonLabel.sendKeys("Test button");
-		Thread.sleep(4000);
 		linkTo.click();
 		aemboxPlugin.click();
 		selectButton.click();
 		checkbox.click();
 		done.click();
-		//publish the page
+		}
+	
+	public void publishTestPage() throws Exception
+	{
+		Thread.sleep(2000);
 		pageInfo.click();
+		Thread.sleep(2000);
 		publishpage.click();
+		Thread.sleep(2000);
 	}
 
 }
