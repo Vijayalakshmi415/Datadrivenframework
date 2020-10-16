@@ -14,7 +14,7 @@ import Utility.BrowserFactory;
 public class VerifyHeroImageComponent {
 	
 	@Test (priority=1)
-	public void verifyHeroImageComponent() throws Exception {
+	public void verifyHeroImageAuthor() throws Exception {
 		
 		WebDriver driver=BrowserFactory.startBrowser("chrome", "https://nextrow-author.adobesandbox.com/libs/granite/core/content/login.html");
 		

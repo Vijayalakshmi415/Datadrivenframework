@@ -20,5 +20,4 @@ public class VerifyValidLogin {
 		
 		loginPage.loginNrdemo("admin", "jaP#uv+QAp9l");
 	}
-
 }
