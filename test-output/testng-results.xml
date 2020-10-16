@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="115758" started-at="2020-10-14T13:30:16 IST" finished-at="2020-10-14T13:32:12 IST">
+  <suite name="Default suite" duration-ms="170370" started-at="2020-10-16T17:06:46 IST" finished-at="2020-10-16T17:09:36 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="115758" started-at="2020-10-14T13:30:16 IST" finished-at="2020-10-14T13:32:12 IST">
-      <class name="com.nrdemo.Testcases.VerifyHeroImageComponent">
-        <test-method status="PASS" signature="verifyHeroImageComponent()[pri:1, instance:com.nrdemo.Testcases.VerifyHeroImageComponent@4f970963]" name="verifyHeroImageComponent" duration-ms="96027" started-at="2020-10-14T13:30:16 IST" finished-at="2020-10-14T13:31:52 IST">
+    <test name="Default test" duration-ms="170370" started-at="2020-10-16T17:06:46 IST" finished-at="2020-10-16T17:09:36 IST">
+      <class name="com.nrdemo.Testcases.VerifyImageWithAddToCartLink">
+        <test-method status="PASS" signature="imageWithAddToCartAuthor()[pri:1, instance:com.nrdemo.Testcases.VerifyImageWithAddToCartLink@4f970963]" name="imageWithAddToCartAuthor" duration-ms="148710" started-at="2020-10-16T17:06:46 IST" finished-at="2020-10-16T17:09:14 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHeroImageComponent -->
-        <test-method status="PASS" signature="verifyHeroImagePublisher()[pri:2, instance:com.nrdemo.Testcases.VerifyHeroImageComponent@4f970963]" name="verifyHeroImagePublisher" duration-ms="19661" started-at="2020-10-14T13:31:52 IST" finished-at="2020-10-14T13:32:12 IST">
+        </test-method> <!-- imageWithAddToCartAuthor -->
+        <test-method status="PASS" signature="imageWithAddToCartPublisher()[pri:2, instance:com.nrdemo.Testcases.VerifyImageWithAddToCartLink@4f970963]" name="imageWithAddToCartPublisher" duration-ms="21601" started-at="2020-10-16T17:09:14 IST" finished-at="2020-10-16T17:09:36 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHeroImagePublisher -->
-      </class> <!-- com.nrdemo.Testcases.VerifyHeroImageComponent -->
+        </test-method> <!-- imageWithAddToCartPublisher -->
+      </class> <!-- com.nrdemo.Testcases.VerifyImageWithAddToCartLink -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
